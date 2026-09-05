@@ -1157,7 +1157,7 @@
 
     .new-geteasy-hero-title-highlight::after {
         height: 40px;
-        bottom: 2px;
+        bottom: -1px;
     }
 
     .new-geteasy-hero-description {
