@@ -71,6 +71,7 @@ const Home = () => {
     }, [featurePoints.length]);
 
     return (
+        <>
         <section className="new-geteasy-hero-section">
             <div className="new-geteasy-hero-container">
                 {/* Left Side Content */}
@@ -254,6 +255,10 @@ const Home = () => {
                 </div>
             </div>
         </section>
+
+        <section style={{height: "100vh"}}> </section>
+
+        </>
     );
 };
 

@@ -6,7 +6,7 @@
 .new-geteasy-hero-section {
     position: relative;
     width: 100%;
-    padding: 80px 40px;
+    padding: 80px 40px 120px;
     background: radial-gradient(circle at 10% 20%, rgba(254, 144, 95, 0.07) 0%, transparent 45%),
         radial-gradient(circle at 90% 80%, rgba(254, 144, 95, 0.05) 0%, transparent 40%),
         #ffffff;
@@ -841,7 +841,7 @@
 /* 1. LARGE / MEDIUM DESKTOPS */
 @media (min-width: 1200px) and (max-width: 1439px) {
     .new-geteasy-hero-section {
-        padding: 70px 32px;
+        padding: 70px 32px 110px;
     }
 
     .new-geteasy-top-badge-text {
@@ -937,7 +937,7 @@
 /* 2. MINI DESKTOPS & LANDSCAPE TABLETS (Together) */
 @media (min-width: 992px) and (max-width: 1199px) {
     .new-geteasy-hero-section {
-        padding: 60px 24px;
+        padding: 60px 24px 100px;
     }
 
     .new-geteasy-hero-title {
@@ -1046,7 +1046,7 @@
 /* 3. PORTRAIT TABLETS (Separate) */
 @media (min-width: 577px) and (max-width: 991px) {
     .new-geteasy-hero-section {
-        padding: 50px 24px;
+        padding: 50px 24px 90px;
     }
 
     .new-geteasy-hero-container {
@@ -1137,7 +1137,7 @@
 /* 4. MOBILE (Separate) */
 @media (max-width: 576px) {
     .new-geteasy-hero-section {
-        padding: 40px 16px;
+        padding: 40px 16px 95px;
     }
 
     .new-geteasy-hero-container {
@@ -1225,8 +1225,8 @@
     }
 
     .new-geteasy-mobile-crm {
-        left: -22px;
-        bottom: -79px;
+        left: -10px;
+        bottom: -50px;
         width: 35%;
     }
 
