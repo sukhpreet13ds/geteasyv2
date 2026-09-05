@@ -8,14 +8,16 @@ import {
   faPaperPlane, 
   faCalendarCheck, 
   faFileInvoiceDollar, 
-  faChartLine 
+  faChartLine,
+  faRocket,
+  faShieldHalved,
+  faHeadset
 } from '@fortawesome/free-solid-svg-icons';
 import './style/style.css';
-
 import crmImg from '../assets/CRM.png';
 import mobileCrmImg from '../assets/Mobile-crm.png';
-import insta4Img from '../assets/bubbles/insta4.png';
-import webLeftImg from '../assets/bubbles/web-left.png';
+import insta4Img from '../assets/bubbles/insta44.png';
+import webLeftImg from '../assets/bubbles/web-leftt.png';
 
 import salon1 from '../assets/salon-logo1.jpg';
 import salon2 from '../assets/salon-logo2.jpg';
@@ -30,6 +32,43 @@ const Home = () => {
         { title: 'Billing & Payments', icon: faFileInvoiceDollar },
         { title: 'Real-Time Analytics', icon: faChartLine },
     ];
+
+    const featurePoints = [
+        {
+            title: 'Save Time',
+            subtitle: 'Automate daily tasks and workflows',
+            icon: faRocket,
+            colorClass: 'icon-purple'
+        },
+        {
+            title: 'Grow Business',
+            subtitle: 'Increase sales and customer retention',
+            icon: faChartLine,
+            colorClass: 'icon-green'
+        },
+        {
+            title: 'Secure & Reliable',
+            subtitle: 'Your data is safe and protected',
+            icon: faShieldHalved,
+            colorClass: 'icon-amber'
+        },
+        {
+            title: '24/7 Support',
+            subtitle: "We're always here to help you",
+            icon: faHeadset,
+            colorClass: 'icon-pink'
+        }
+    ];
+
+    const [currentFeatureIndex, setCurrentFeatureIndex] = React.useState(0);
+
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentFeatureIndex((prev) => (prev + 1) % featurePoints.length);
+        }, 1500);
+
+        return () => clearInterval(interval);
+    }, [featurePoints.length]);
 
     return (
         <section className="new-geteasy-hero-section">
@@ -143,6 +182,46 @@ const Home = () => {
 
                 {/* Right Side CRM Showcase */}
                 <div className="new-geteasy-hero-right">
+                    {/* Top Feature Banner */}
+                    <div className="new-geteasy-top-feature-banner">
+                        {/* Hand-drawn Curvy SVG Arrow - Bottom Left */}
+                        <div className="new-geteasy-banner-arrow-left">
+                            <svg width="66" height="66" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path 
+                                    className="animated-arrow-line" 
+                                    d="M52 8C36 5 18 14 20 28C22 40 38 44 44 32C48 22 36 12 22 18C10 24 8 42 20 56C24 63 31 67 38 69" 
+                                    stroke="#fe6527" 
+                                    strokeWidth="3.4" 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round"
+                                />
+                                {/* Separate V-shaped Arrowhead Group - Rotatable independently via CSS */}
+                                <g className="animated-arrow-head-group">
+                                    <path 
+                                        className="animated-arrow-head" 
+                                        d="M24 57L38 69L46 56" 
+                                        stroke="#fe6527" 
+                                        strokeWidth="3.4" 
+                                        strokeLinecap="round" 
+                                        strokeLinejoin="round"
+                                    />
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div className="new-geteasy-banner-content single-mode">
+                            <div key={currentFeatureIndex} className="new-geteasy-banner-item active-single-item">
+                                <div className={`new-geteasy-banner-icon ${featurePoints[currentFeatureIndex].colorClass}`}>
+                                    <FontAwesomeIcon icon={featurePoints[currentFeatureIndex].icon} />
+                                </div>
+                                <div className="new-geteasy-banner-info">
+                                    <h4 className="new-geteasy-banner-title">{featurePoints[currentFeatureIndex].title}</h4>
+                                    <p className="new-geteasy-banner-sub">{featurePoints[currentFeatureIndex].subtitle}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="new-geteasy-crm-card-wrapper">
                         {/* Main CRM Image */}
                         <img

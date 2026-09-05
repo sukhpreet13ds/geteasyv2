@@ -108,11 +108,11 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: 6px;
+    bottom: 4px;
     width: 100%;
     height: 60px;
     background-color: rgba(254, 144, 95, 0.3);
-    border-radius: 4px;
+    border-radius: 0px;
     z-index: -1;
     transform: scaleX(0);
     transform-origin: left center;
@@ -180,7 +180,7 @@
 .new-geteasy-features-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px 20px;
+    gap: 12px 8px;
     margin-top: 4px;
     margin-bottom: 4px;
     opacity: 0;
@@ -511,10 +511,192 @@
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
     opacity: 0;
     animation: newGeteasyFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     animation-delay: 0.5s;
+}
+
+/* Compact Single Mode Looping Banner */
+.new-geteasy-top-feature-banner {
+    position: relative;
+    width: auto;
+    max-width: 380px;
+    margin: 0 auto 0 25px;
+    background: #ffffff;
+    border-radius: 28px;
+    border: 2px dashed #c7d2fe;
+    padding: 10px 18px;
+    box-shadow: 0 12px 35px -5px rgba(99, 102, 241, 0.08), 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
+    opacity: 0;
+    animation: newGeteasyPopFromCrm 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.95s;
+    overflow: visible;
+}
+
+.new-geteasy-top-feature-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px -5px rgba(99, 102, 241, 0.12), 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.new-geteasy-banner-content.single-mode {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 44px;
+    overflow: hidden;
+}
+
+.new-geteasy-banner-item.active-single-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    animation: newGeteasyPointSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes newGeteasyPointSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(14px) scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Hand-drawn Curvy SVG Arrow on Left (Mirrored to point towards CRM image) */
+.new-geteasy-banner-arrow-left {
+    position: absolute;
+    left: -48px;
+    bottom: -40px;
+    z-index: 12;
+    pointer-events: none;
+    transform: scaleX(1) rotate(-3deg);
+}
+
+/* Rotatable V-shaped Arrowhead Edge Group - Adjust rotation angle degree here independently! */
+.animated-arrow-head-group {
+    transform-origin: 38px 69px;
+    transform: rotate(-43deg);
+    transition: transform 0.2s ease;
+}
+
+/* SVG Stroke Drawing Animation */
+.animated-arrow-line,
+.animated-arrow-head {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: newGeteasyDrawArrow 1.1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 1.35s;
+}
+
+@keyframes newGeteasyDrawArrow {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes newGeteasyPopFromCrm {
+    0% {
+        opacity: 0;
+        transform: translateY(55px) scale(0.88);
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Banner Content Layout */
+.new-geteasy-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+.new-geteasy-banner-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.new-geteasy-banner-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Icon Gradient / Color Variants matching design */
+.new-geteasy-banner-icon.icon-purple {
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+    /* box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35); */
+}
+
+.new-geteasy-banner-icon.icon-green {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    /* box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35); */
+}
+
+.new-geteasy-banner-icon.icon-amber {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    /* box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35); */
+}
+
+.new-geteasy-banner-icon.icon-pink {
+    background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+    /* box-shadow: 0 4px 14px rgba(236, 72, 153, 0.35); */
+}
+
+.new-geteasy-banner-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.new-geteasy-banner-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.new-geteasy-banner-sub {
+    font-family: var(--font-paragraph);
+    font-size: 12px;
+    font-weight: 500;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.new-geteasy-banner-divider {
+    width: 1px;
+    height: 38px;
+    background-color: #e2e8f0;
+    flex-shrink: 0;
 }
 
 .new-geteasy-crm-card-wrapper {
@@ -530,7 +712,7 @@
 }
 
 .new-geteasy-crm-card-wrapper:hover {
-    transform: translateY(-4px);
+    /* transform: translateY(-4px); */
     box-shadow: 0 30px 70px -10px rgba(17, 5, 50, 0.2),
         0 0 50px rgba(254, 144, 95, 0.15);
 }
@@ -546,8 +728,8 @@
 .new-geteasy-mobile-crm {
     position: absolute;
     left: -76px;
-    bottom: -68px;
-    width: 21%;
+    bottom: -100px;
+    width: 30%;
     height: auto;
     z-index: 5;
     filter: drop-shadow(0 15px 30px rgba(17, 5, 50, 0.25));
@@ -562,7 +744,7 @@
     position: absolute;
     right: 52px;
     top: 104%;
-    width: 42%;
+    width: 48%;
     height: auto;
     z-index: 6;
     filter: drop-shadow(0 12px 25px rgba(17, 5, 50, 0.18));
@@ -576,9 +758,9 @@
 /* Web Left Bubble Image - Top Left (Half Outside, Half Over) */
 .new-geteasy-bubble-webleft {
     position: absolute;
-    right: -155px;
-    top: -145px;
-    width: 44%;
+    right: -70px;
+    top: -128px;
+    width: 32%;
     height: auto;
     z-index: 6;
     filter: drop-shadow(0 12px 25px rgba(17, 5, 50, 0.18));
@@ -662,8 +844,16 @@
         padding: 70px 32px;
     }
 
+    .new-geteasy-top-badge-text {
+        font-size: 14px;
+    }
+
     .new-geteasy-hero-title {
-        font-size: 54px;
+        font-size: 51px;
+    }
+
+    .new-geteasy-hero-description {
+        font-size: 16px;
     }
 
     .new-geteasy-hero-container {
@@ -672,9 +862,9 @@
     }
 
     .new-geteasy-mobile-crm {
-        left: -25px;
-        bottom: -20px;
-        width: 28%;
+        left: -53px;
+        bottom: -85px;
+        width: 27%;
     }
 
     .new-geteasy-bubble-insta4 {
@@ -683,17 +873,64 @@
     }
 
     .new-geteasy-bubble-webleft {
-        right: -20px;
-        top: -140px;
-        width: 47%;
+
+        right: 8px;
+        top: -95px;
+        width: 28%;
+
     }
 
     .new-geteasy-hero-title-highlight::after {
-        height: 46px;
+        height: 51px;
+        bottom: -1px;
     }
-    .new-geteasy-btn-primary,.new-geteasy-btn-secondary,.new-geteasy-feature-badge-text {
- 
-font-size: 14px;
+
+    .new-geteasy-btn-primary,
+    .new-geteasy-btn-secondary,
+    .new-geteasy-feature-badge-text {
+
+        font-size: 14px;
+    }
+
+    .new-geteasy-features-container {
+        gap: 8px 8px;
+    }
+
+    .new-geteasy-btn-primary,
+    .new-geteasy-btn-secondary {
+        padding: 14px 15px;
+    }
+
+    .new-geteasy-feature-badge {
+        padding: 8px 10px;
+    }
+
+    .new-geteasy-top-feature-banner {
+        padding: 12px 14px;
+        border-radius: 24px;
+    }
+    .new-geteasy-banner-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .new-geteasy-banner-title {
+        font-size: 16px;
+    }
+
+    .new-geteasy-banner-sub {
+        font-size: 10.5px;
+    }
+
+    .new-geteasy-banner-divider {
+        height: 30px;
+    }
+
+    .new-geteasy-banner-arrow-left {
+        left: -40px;
+        bottom: -46px;
+        transform: scaleX(1) scale(0.85) rotate(12deg);
     }
 }
 
@@ -704,7 +941,7 @@ font-size: 14px;
     }
 
     .new-geteasy-hero-title {
-        font-size: 46px;
+        font-size: 44px;
     }
 
     .new-geteasy-hero-description {
@@ -717,20 +954,92 @@ font-size: 14px;
     }
 
     .new-geteasy-mobile-crm {
-        left: -18px;
-        bottom: -15px;
-        width: 26%;
+        left: -73px;
+        bottom: -85px;
+        width: 32%;
+
     }
 
     .new-geteasy-bubble-insta4 {
-        right: -18px;
-        width: 28%;
+        right: 106px;
+        width: 48%;
     }
 
     .new-geteasy-bubble-webleft {
-        left: -15px;
-        top: -12px;
-        width: 30%;
+
+        right: 18px;
+        top: -100px;
+        width: 28%;
+
+    }
+
+    .new-geteasy-feature-badge-text {
+        font-size: 12px;
+    }
+
+    .new-geteasy-feature-badge {
+        padding: 8px 6px;
+    }
+
+    .new-geteasy-features-container {
+        gap: 8px 9px;
+    }
+
+    .new-geteasy-top-badge-text {
+        font-size: 14px;
+    }
+
+    .new-geteasy-hero-actions {
+        gap: 8px;
+    }
+
+    .new-geteasy-btn-primary,
+    .new-geteasy-btn-secondary {
+        font-size: 14px;
+        padding: 14px 15px;
+
+    }
+
+    .new-geteasy-hero-title-highlight::after {
+        bottom: 0px;
+        height: 45px;
+    }
+
+    .new-geteasy-top-feature-banner {
+        padding: 10px 12px;
+        border-radius: 22px;
+    }
+
+    .new-geteasy-banner-content {
+        gap: 6px;
+    }
+
+    .new-geteasy-banner-item {
+        gap: 6px;
+    }
+
+    .new-geteasy-banner-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .new-geteasy-banner-title {
+        font-size: 14px;
+    }
+
+    .new-geteasy-banner-sub {
+        font-size: 9.5px;
+    }
+
+    .new-geteasy-banner-divider {
+        height: 26px;
+    }
+
+    .new-geteasy-banner-arrow-left {
+        left: -34px;
+        bottom: -42px;
+        transform: scaleX(1) scale(0.75) rotate(12deg);
     }
 }
 
@@ -785,6 +1094,43 @@ font-size: 14px;
         left: -12px;
         top: -10px;
         width: 30%;
+    }
+
+    .new-geteasy-top-feature-banner {
+        padding: 14px 16px;
+        border-radius: 20px;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .new-geteasy-banner-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 16px;
+    }
+
+    .new-geteasy-banner-divider {
+        display: none;
+    }
+
+    .new-geteasy-banner-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .new-geteasy-banner-title {
+        font-size: 13px;
+    }
+
+    .new-geteasy-banner-sub {
+        font-size: 11px;
+    }
+
+    .new-geteasy-banner-arrow-left {
+        left: -30px;
+        bottom: -40px;
+        transform: scaleX(-1) scale(0.75) rotate(12deg);
     }
 }
 
@@ -874,25 +1220,64 @@ font-size: 14px;
     }
 
     .new-geteasy-rating-container {
-        flex-direction: column;
-        gap: 8px;
+        gap: 22px;
         align-items: center;
     }
 
     .new-geteasy-mobile-crm {
-        left: -8px;
-        bottom: -8px;
-        width: 30%;
+        left: -22px;
+        bottom: -79px;
+        width: 35%;
     }
 
     .new-geteasy-bubble-insta4 {
-        right: -8px;
-        width: 50%;
+        right: 16px;
+        width: 56%;
     }
 
     .new-geteasy-bubble-webleft {
-        right: -46px;
-        top: -64px;
-        width: 50%;
+        right: -25px;
+        top: -44px;
+        width: 38%;
+    }
+
+    .new-geteasy-top-feature-banner {
+        /* width: 100%; */
+        padding: 3px 14px;
+        border-radius: 18px;
+    }
+
+    .new-geteasy-banner-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 10px;
+    }
+
+    .new-geteasy-banner-item {
+        gap: 8px;
+    }
+
+    .new-geteasy-banner-divider {
+        display: none;
+    }
+
+    .new-geteasy-banner-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .new-geteasy-banner-title {
+        font-size: 16px;
+    }
+
+    .new-geteasy-banner-sub {
+        font-size: 10px;
+    }
+
+    .new-geteasy-banner-arrow-left {
+        left: -20px;
+        bottom: -46px;
+        transform: scaleX(1) scale(0.65) rotate(12deg);
     }
 }

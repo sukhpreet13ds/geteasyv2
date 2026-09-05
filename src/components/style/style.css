@@ -519,6 +519,9 @@ body {
   .mega-menu-overlay {
     width: 95%;
   }
+  .nav-link {
+    font-size: 20px;
+  }
 }
 
 /* 2. MINI DESKTOPS & LANDSCAPE TABLETS (Together) */
