@@ -1,15 +1,58 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
+import footerLogo from '../assets/footer-logo.png';
 
 const Footer = () => {
   return (
     <footer className="custom-footer">
       <div className="footer-container">
         
-        {/* logo.svg before platform row */}
-        <div className="footer-top-logo">
-          <img src={logo} alt="GetEasy Logo" className="footer-logo-img" />
+        {/* Top Header Row with Logo & Social Icons */}
+        <div className="footer-top-brand-row">
+          <div className="footer-brand-info">
+            <img src={footerLogo} alt="Get Easy Logo" className="footer-logo-img" />
+            <p className="footer-brand-desc">
+              Empowering salons, spas, and wellness businesses with smart AI automation, instant billing, and seamless management.
+            </p>
+          </div>
+          
+          <div className="footer-social-wrapper">
+            <span className="footer-social-label">Follow Us:</span>
+            <div className="footer-social-links">
+              {/* Instagram */}
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              {/* Facebook */}
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              {/* LinkedIn */}
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              {/* Twitter / X */}
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              {/* YouTube */}
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
+
+        <div className="footer-main-divider"></div>
 
         {/* Platform row (Grid of columns) */}
         <div className="footer-grid">
@@ -27,7 +70,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Countries we serve in - spanning multiple sub-columns */}
+          {/* Countries we serve in */}
           <div className="footer-col footer-countries-col">
             <h4 className="footer-heading">Countries we serve in</h4>
             <div className="countries-grid">
@@ -76,34 +119,17 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Giant footer section like Screenshot 1 */}
-        <div className="footer-giant-wrapper">
-          <div className="footer-divider"></div>
-          
-          {/* Giant Logo + EASY Word */}
-          <div className="footer-giant-brand-row">
-            <div className="footer-giant-logo-icon">
-              <svg width="180" height="80" viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Skewed Neon Green Triangle */}
-                <path d="M30 70 L0 70 L30 15 L45 15 Z" fill="#9dff00" />
-                {/* First Dark slash */}
-                <path d="M48 70 L78 15 H108 L78 70 Z" fill="#1b231d" />
-                {/* Second Dark slash */}
-                <path d="M85 70 L115 15 H145 L115 70 Z" fill="#1b231d" />
-              </svg>
-            </div>
-            <div className="footer-giant-text">EASY</div>
-          </div>
+        <div className="footer-bottom-divider"></div>
 
-          <div className="footer-bottom-row">
-            <div className="footer-bottom-left">THE FIRST THE LAST</div>
-            <div className="footer-bottom-middle">
-              <a href="#">TERMS & CONDITIONS</a>
-              <a href="#">PRIVACY POLICY</a>
-            </div>
-            <div className="footer-bottom-right">
-              ©2026 EASY. ALL RIGHTS RESERVED.
-            </div>
+        {/* Bottom Bar Row */}
+        <div className="footer-bottom-bar">
+          <div className="footer-bottom-left">
+            © 2026 Get Easy Software. All Rights Reserved.
+          </div>
+          <div className="footer-bottom-right">
+            <a href="#">Terms & Conditions</a>
+            <span className="dot-sep">•</span>
+            <a href="#">Privacy Policy</a>
           </div>
         </div>
 

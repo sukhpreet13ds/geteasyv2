@@ -21,7 +21,6 @@
 body {
   font-family: var(--font-paragraph);
   color: var(--text-dark);
-  background-color: #ffffff;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
@@ -1016,7 +1015,10 @@ body {
   box-shadow: 0 10px 30px rgba(254, 144, 95, 0.08);
   transform: translateY(-2px);
 }
-
+.promo-point-item.active .promo-point-text p{
+  color: #000;
+  font-weight: 600;
+}
 .promo-icon-box {
   width: 56px;
   height: 56px;
@@ -1393,8 +1395,8 @@ body {
   }
 
   .marquee-content {
-    gap: 40px;
-    padding-right: 40px;
+    gap: 20px;
+    padding-right: 20px;
   }
 
   .marquee-wrapper {
@@ -2516,7 +2518,7 @@ body {
   grid-template-areas:
     "billing marketing inventory"
     "access access inventory";
-  gap: 0;
+  gap: 10px;
   width: 100%;
 }
 
@@ -2524,7 +2526,7 @@ body {
 .feature-card {
   background-color: #ffffff;
   border: 1px solid rgba(254, 101, 39, 0.08);
-  border-radius: 0 !important;
+  border-radius: 10px !important;
   padding: 0; /* Flush image/video with card borders */
   box-shadow: 0 10px 30px rgba(254, 101, 39, 0.02);
   display: flex;
@@ -2565,13 +2567,13 @@ body {
 .feature-content-top {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 35px 35px 24px 35px; /* Apply padding to text only */
+  gap: 6px;
+  padding: 35px 24px 24px 24px; /* Apply padding to text only */
 }
 
 .feature-card-title {
   font-family: "Plus Jakarta Sans", sans-serif !important;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--black-color);
   margin: 0;
@@ -2579,9 +2581,9 @@ body {
 
 .feature-card-desc {
   font-family: var(--font-paragraph);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
-  color: var(--text-muted);
+  color: #1c1c1d;
   margin: 0;
 }
 
@@ -2630,7 +2632,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 35px; /* Text padding for wide card */
+  padding: 24px; /* Text padding for wide card */
   justify-content: center;
 }
 
@@ -2649,8 +2651,8 @@ body {
   align-items: center;
   gap: 10px;
   font-family: var(--font-paragraph);
-  font-size: 15px;
-  color: var(--text-muted);
+  font-size: 17px;
+  color: #000;
 }
 
 .bullet-check-icon {
@@ -2762,9 +2764,7 @@ body {
   .features-section-container {
     padding: 0 20px;
   }
-  .features-section-title {
-    font-size: 38px;
-  }
+
   .features-section-subtitle {
     font-size: 17px;
   }
@@ -2928,10 +2928,10 @@ body {
 }
 
 .review-card-text {
-  font-family: var(--font-paragraph);
-  font-size: 15px;
+  font-family: var(--font-paragraph); 
+  font-size: 16px;
   line-height: 1.6;
-  color: var(--text-muted);
+  color: #000;
   margin: 0;
 }
 
@@ -3584,36 +3584,99 @@ body {
 }
 
 /* ==========================================================================
-   CUSTOM FOOTER STYLES
+   CUSTOM FOOTER STYLES (Dark Theme)
    ========================================================================== */
 .custom-footer {
-  background-color: #f7f9f6;
-  padding: 80px 80px 40px 80px;
-  border-top: 1px solid rgba(27, 35, 29, 0.08);
+  background-color: #080b11;
+  padding: 70px 40px 30px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-family: var(--font-paragraph);
-  color: #1b231d;
+  color: #94a3b8;
 }
 
 .footer-container {
-  max-width: 1340px;
+  max-width: 1280px;
   margin: 0 auto;
   width: 100%;
 }
 
-.footer-top-logo {
-  margin-bottom: 40px;
+.footer-top-brand-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-brand-info {
+  max-width: 520px;
 }
 
 .footer-logo-img {
-  height: 50px;
+  height: 48px;
   width: auto;
+  margin-bottom: 14px;
+}
+
+.footer-brand-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.footer-social-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon-btn:hover {
+  background: linear-gradient(135deg, #fe6527 0%, #fe905f 100%);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(254, 101, 39, 0.35);
+}
+
+.footer-main-divider,
+.footer-bottom-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  width: 100%;
+  margin: 36px 0;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 2.5fr 1.2fr 1.2fr;
+  grid-template-columns: 1.4fr 2.4fr 1fr 1fr;
   gap: 40px;
-  margin-bottom: 60px;
 }
 
 .footer-col {
@@ -3627,18 +3690,18 @@ body {
   margin-bottom: 24px;
   position: relative;
   display: inline-block;
-  color: #1b231d;
+  color: #ffffff;
 }
 
-/* Green line underline like second screenshot */
 .footer-heading::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: -6px;
-  width: 20px;
+  width: 24px;
   height: 3px;
-  background-color: #10b981; /* bright emerald green */
+  background: linear-gradient(135deg, #fe6527 0%, #fe905f 100%);
+  border-radius: 2px;
 }
 
 .footer-links {
@@ -3651,16 +3714,17 @@ body {
 }
 
 .footer-links li a {
-  color: #4a554c;
+  color: #94a3b8;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 .footer-links li a:hover {
-  color: #1b231d;
-  font-weight: 600;
+  color: #fe6527;
+  transform: translateX(4px);
 }
 
 .countries-grid {
@@ -3669,110 +3733,63 @@ body {
   gap: 20px;
 }
 
-.footer-countries-col {
-  padding-right: 20px;
-}
-
-/* Giant section styles */
-.footer-giant-wrapper {
-  margin-top: 60px;
-}
-
-.footer-divider {
-  height: 1px;
-  background-color: rgba(27, 35, 29, 0.08);
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.footer-giant-brand-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 40px;
-}
-
-.footer-giant-logo-icon {
-  display: flex;
-  align-items: center;
-}
-
-.footer-giant-text {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 8rem;
-  font-weight: 900;
-  line-height: 1;
-  color: #1b231d;
-  letter-spacing: 0.1em;
-}
-
-.footer-bottom-row {
+.footer-bottom-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  color: #6b776d;
-  padding-top: 20px;
+  font-size: 14px;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.footer-bottom-left {
-  text-transform: uppercase;
-}
-
-.footer-bottom-middle {
+.footer-bottom-right {
   display: flex;
-  gap: 30px;
+  gap: 14px;
+  align-items: center;
 }
 
-.footer-bottom-middle a {
-  color: #6b776d;
+.footer-bottom-right a {
+  color: #94a3b8;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.footer-bottom-middle a:hover {
-  color: #1b231d;
+.footer-bottom-right a:hover {
+  color: #fe6527;
 }
 
-.footer-bottom-right {
-  text-transform: uppercase;
+.dot-sep {
+  color: #475569;
 }
 
 /* Responsive Footer */
 @media (max-width: 1024px) {
   .custom-footer {
-    padding: 60px 40px 30px 40px;
+    padding: 50px 24px 24px 24px;
   }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-  .footer-giant-text {
-    font-size: 6rem;
+    gap: 32px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+  .footer-top-brand-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
   .countries-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .footer-bottom-row {
+  .footer-bottom-bar {
     flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-  .footer-giant-brand-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .footer-giant-text {
-    font-size: 4rem;
+    align-items: flex-start;
+    gap: 12px;
   }
 }

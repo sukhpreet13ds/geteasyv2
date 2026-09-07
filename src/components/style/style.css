@@ -608,3 +608,23 @@ body {
     display: none !important;
   }
 }
+
+.easy-ai-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.mobile-nav-link.easy-ai-mobile-link {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.mobile-nav-link.easy-ai-mobile-link .easy-ai-icon {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}

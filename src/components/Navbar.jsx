@@ -115,12 +115,42 @@ const Navbar = () => {
               </button>
             </li>
 
-            <li className="nav-item">
-              <Link to="/feature" className="nav-link">Easy AI</Link>
-            </li>
+          
             
             <li className="nav-item">
               <Link to="/blog" className="nav-link">Blogs</Link>
+            </li>
+              <li className="nav-item">
+              <Link to="/feature" className="nav-link">
+                <svg className="easy-ai-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#atomGrad)" strokeWidth="1.2" strokeOpacity="0.5" transform="rotate(-30 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#atomGrad)" strokeWidth="1.2" strokeOpacity="0.5" transform="rotate(30 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#atomGrad)" strokeWidth="1.2" strokeOpacity="0.5" transform="rotate(90 12 12)"></ellipse>
+                  <circle cx="12" cy="12" r="2" fill="url(#atomGrad)"></circle>
+                  <g transform="rotate(-30 12 12)">
+                    <circle r="1.2" fill="url(#atomGrad)">
+                      <animateMotion dur="3s" repeatCount="indefinite" path="M21,12 A9,3.5 0 1,1 3,12 A9,3.5 0 1,1 21,12"></animateMotion>
+                    </circle>
+                  </g>
+                  <g transform="rotate(30 12 12)">
+                    <circle r="1.2" fill="url(#atomGrad)">
+                      <animateMotion dur="4s" repeatCount="indefinite" path="M21,12 A9,3.5 0 1,1 3,12 A9,3.5 0 1,1 21,12" begin="1s"></animateMotion>
+                    </circle>
+                  </g>
+                  <g transform="rotate(90 12 12)">
+                    <circle r="1.2" fill="url(#atomGrad)">
+                      <animateMotion dur="3.5s" repeatCount="indefinite" path="M21,12 A9,3.5 0 1,1 3,12 A9,3.5 0 1,1 21,12" begin="0.5s"></animateMotion>
+                    </circle>
+                  </g>
+                  <defs>
+                    <linearGradient id="atomGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#fe6527"></stop>
+                      <stop offset="100%" stopColor="#fe905f"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                Easy AI
+              </Link>
             </li>
           </ul>
         </nav>
@@ -434,12 +464,42 @@ const Navbar = () => {
               </div>
             </li>
 
-            <li className="mobile-nav-item">
-              <Link to="/feature" className="mobile-nav-link" onClick={toggleMobileMenu}>Easy AI</Link>
-            </li>
+           
 
             <li className="mobile-nav-item">
               <Link to="/blog" className="mobile-nav-link" onClick={toggleMobileMenu}>Blogs</Link>
+            </li>
+             <li className="mobile-nav-item">
+              <Link to="/feature" className="mobile-nav-link easy-ai-mobile-link" onClick={toggleMobileMenu}>
+                <svg className="easy-ai-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#atomGradMobile)" strokeWidth="1.2" strokeOpacity="0.5" transform="rotate(-30 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#atomGradMobile)" strokeWidth="1.2" strokeOpacity="0.5" transform="rotate(30 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="url(#atomGradMobile)" strokeWidth="1.2" strokeOpacity="0.5" transform="rotate(90 12 12)"></ellipse>
+                  <circle cx="12" cy="12" r="2" fill="url(#atomGradMobile)"></circle>
+                  <g transform="rotate(-30 12 12)">
+                    <circle r="1.2" fill="url(#atomGradMobile)">
+                      <animateMotion dur="3s" repeatCount="indefinite" path="M21,12 A9,3.5 0 1,1 3,12 A9,3.5 0 1,1 21,12"></animateMotion>
+                    </circle>
+                  </g>
+                  <g transform="rotate(30 12 12)">
+                    <circle r="1.2" fill="url(#atomGradMobile)">
+                      <animateMotion dur="4s" repeatCount="indefinite" path="M21,12 A9,3.5 0 1,1 3,12 A9,3.5 0 1,1 21,12" begin="1s"></animateMotion>
+                    </circle>
+                  </g>
+                  <g transform="rotate(90 12 12)">
+                    <circle r="1.2" fill="url(#atomGradMobile)">
+                      <animateMotion dur="3.5s" repeatCount="indefinite" path="M21,12 A9,3.5 0 1,1 3,12 A9,3.5 0 1,1 21,12" begin="0.5s"></animateMotion>
+                    </circle>
+                  </g>
+                  <defs>
+                    <linearGradient id="atomGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#fe6527"></stop>
+                      <stop offset="100%" stopColor="#fe905f"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span>Easy AI</span>
+              </Link>
             </li>
           </ul>
 
