@@ -7,7 +7,7 @@
   --text-dark: #1f1f2e;
   --text-muted: #5f5f6e;
   --white: #ffffff;
-  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
   --font-paragraph: 'Manrope', sans-serif;
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-premium: 0 12px 30px rgba(0, 0, 0, 0.06);
@@ -35,8 +35,14 @@ body {
   z-index: 1000;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-light);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.02);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
 }
 
 .navbar-container {
@@ -48,6 +54,7 @@ body {
   padding: 16px 40px;
   position: relative;
   height: 80px;
+  z-index: 1001;
 }
 
 /* --- LOGO --- */
@@ -268,9 +275,11 @@ body {
   flex-shrink: 0;
 }
 
-.fa-icon {
-  font-size: 18px;
-  color: var(--primary-color);
+.fa-icon,
+.nav-img-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
   transition: var(--transition-smooth);
 }
 
@@ -278,7 +287,8 @@ body {
   background-color: var(--white);
 }
 
-.mega-menu-item:hover .fa-icon {
+.mega-menu-item:hover .fa-icon,
+.mega-menu-item:hover .nav-img-icon {
   color: var(--primary-color);
   transform: scale(1.1);
 }
@@ -441,7 +451,7 @@ body {
 }
 
 .mobile-nav-item.expanded .mobile-dropdown-panel {
-  max-height: 400px;
+  max-height: 800px;
   opacity: 1;
   padding: 12px;
 }
@@ -454,7 +464,9 @@ body {
 }
 
 .mobile-sub-list a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 8px 12px;
   font-size: 15px;
   font-weight: 600;
@@ -462,6 +474,13 @@ body {
   text-decoration: none;
   border-radius: 6px;
   transition: var(--transition-smooth);
+}
+
+.mobile-sub-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .mobile-sub-list a:hover {
@@ -503,7 +522,7 @@ body {
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: fadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 

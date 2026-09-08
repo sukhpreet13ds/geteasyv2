@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  // Software Category Icons
-  faScissors, 
-  faSpa, 
-  faHandSparkles, 
-  faCar, 
-  faUserDoctor, 
-  faBrush, 
-  faPenNib, 
-  faPaw, 
-  faWrench, 
-  // Features Icons
-  faBullhorn,
-  faUsers,
-  faCubes,
-  faBuilding,
-  faFileInvoiceDollar,
-  faCalendarCheck,
-  faChartPie
-} from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/logo.svg';
 import './style/style.css';
+
+// Category Image Icons
+import cat1Icon from '../assets/icons/category1.png';
+import cat2Icon from '../assets/icons/category2.png';
+import cat3Icon from '../assets/icons/category3.png';
+import cat4Icon from '../assets/icons/category4.png';
+import cat5Icon from '../assets/icons/category5.png';
+import cat6Icon from '../assets/icons/category6.png';
+import cat7Icon from '../assets/icons/category7.png';
+import cat8Icon from '../assets/icons/category8.png';
+import cat9Icon from '../assets/icons/category9.png';
+import cat10Icon from '../assets/icons/category10.png';
+
+// Features Image Icons
+import feat1Icon from '../assets/icons/feature1.png';
+import feat2Icon from '../assets/icons/feature2.png';
+import feat3Icon from '../assets/icons/feature3.png';
+import feat4Icon from '../assets/icons/feature4.png';
+import feat5Icon from '../assets/icons/feature5.png';
+import feat6Icon from '../assets/icons/feature6.png';
+import feat7Icon from '../assets/icons/feature7.png';
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null); // 'features' | 'category' | null
@@ -183,7 +183,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/feature" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faBullhorn} className="fa-icon" />
+                      <img src={feat1Icon} alt="Marketing" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Marketing</span>
@@ -194,7 +194,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/feature" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faUsers} className="fa-icon" />
+                      <img src={feat2Icon} alt="Employee Management" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Employee Management</span>
@@ -205,7 +205,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/feature" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faCubes} className="fa-icon" />
+                      <img src={feat3Icon} alt="Inventory Management" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Inventory Management</span>
@@ -221,7 +221,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/feature" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faBuilding} className="fa-icon" />
+                      <img src={feat4Icon} alt="Properties Management" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Properties Management</span>
@@ -232,7 +232,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/feature" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faFileInvoiceDollar} className="fa-icon" />
+                      <img src={feat5Icon} alt="Billing & Payment" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Billing & Payment</span>
@@ -248,7 +248,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/feature" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faCalendarCheck} className="fa-icon" />
+                      <img src={feat6Icon} alt="Appointment Management" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Appointment Management</span>
@@ -259,7 +259,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/feature" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faChartPie} className="fa-icon" />
+                      <img src={feat7Icon} alt="Reports & Graphs" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Reports & Graphs</span>
@@ -281,7 +281,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faScissors} className="fa-icon" />
+                      <img src={cat1Icon} alt="Beauty Salon" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Beauty Salon</span>
@@ -292,7 +292,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faCar} className="fa-icon" />
+                      <img src={cat4Icon} alt="Car Spa" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Car Spa</span>
@@ -303,7 +303,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faPenNib} className="fa-icon" />
+                      <img src={cat7Icon} alt="Tattoo Studio" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Tattoo Studio</span>
@@ -314,7 +314,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faWrench} className="fa-icon" />
+                      <img src={cat10Icon} alt="Auto Detailing" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Auto Detailing</span>
@@ -330,7 +330,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faSpa} className="fa-icon" />
+                      <img src={cat2Icon} alt="Spa" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Spa</span>
@@ -341,7 +341,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faBrush} className="fa-icon" />
+                      <img src={cat5Icon} alt="Aesthetic" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Aesthetic</span>
@@ -352,7 +352,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faUserDoctor} className="fa-icon" />
+                      <img src={cat8Icon} alt="Med Spa" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Med Spa</span>
@@ -368,7 +368,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faHandSparkles} className="fa-icon" />
+                      <img src={cat3Icon} alt="Nail Art" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Nail Art</span>
@@ -379,7 +379,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faBrush} className="fa-icon" />
+                      <img src={cat6Icon} alt="Makeup Studio" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Makeup Studio</span>
@@ -390,7 +390,7 @@ const Navbar = () => {
                 <li>
                   <Link to="/category" className="mega-menu-item">
                     <div className="item-icon-wrapper">
-                      <FontAwesomeIcon icon={faPaw} className="fa-icon" />
+                      <img src={cat9Icon} alt="Pet Facility" className="nav-img-icon" />
                     </div>
                     <div>
                       <span className="item-name">Pet Facility</span>
@@ -424,13 +424,13 @@ const Navbar = () => {
               </button>
               <div className="mobile-dropdown-panel">
                 <ul className="mobile-sub-list">
-                  <li><Link to="/feature" onClick={toggleMobileMenu}>Marketing</Link></li>
-                  <li><Link to="/feature" onClick={toggleMobileMenu}>Properties Management</Link></li>
-                  <li><Link to="/feature" onClick={toggleMobileMenu}>Appointment Management</Link></li>
-                  <li><Link to="/feature" onClick={toggleMobileMenu}>Employee Management</Link></li>
-                  <li><Link to="/feature" onClick={toggleMobileMenu}>Billing & Payment</Link></li>
-                  <li><Link to="/feature" onClick={toggleMobileMenu}>Reports & Graphs</Link></li>
-                  <li><Link to="/feature" onClick={toggleMobileMenu}>Inventory Management</Link></li>
+                  <li><Link to="/feature" onClick={toggleMobileMenu}><img src={feat1Icon} alt="" className="mobile-sub-icon" /><span>Marketing</span></Link></li>
+                  <li><Link to="/feature" onClick={toggleMobileMenu}><img src={feat4Icon} alt="" className="mobile-sub-icon" /><span>Properties Management</span></Link></li>
+                  <li><Link to="/feature" onClick={toggleMobileMenu}><img src={feat6Icon} alt="" className="mobile-sub-icon" /><span>Appointment Management</span></Link></li>
+                  <li><Link to="/feature" onClick={toggleMobileMenu}><img src={feat2Icon} alt="" className="mobile-sub-icon" /><span>Employee Management</span></Link></li>
+                  <li><Link to="/feature" onClick={toggleMobileMenu}><img src={feat5Icon} alt="" className="mobile-sub-icon" /><span>Billing & Payment</span></Link></li>
+                  <li><Link to="/feature" onClick={toggleMobileMenu}><img src={feat7Icon} alt="" className="mobile-sub-icon" /><span>Reports & Graphs</span></Link></li>
+                  <li><Link to="/feature" onClick={toggleMobileMenu}><img src={feat3Icon} alt="" className="mobile-sub-icon" /><span>Inventory Management</span></Link></li>
                 </ul>
               </div>
             </li>
@@ -450,16 +450,16 @@ const Navbar = () => {
               </button>
               <div className="mobile-dropdown-panel">
                 <ul className="mobile-sub-list">
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Beauty Salon</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Spa</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Nail Art</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Car Spa</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Aesthetic</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Makeup Studio</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Tattoo Studio</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Med Spa</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Pet Facility</Link></li>
-                  <li><Link to="/category" onClick={toggleMobileMenu}>Auto Detailing</Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat1Icon} alt="" className="mobile-sub-icon" /><span>Beauty Salon</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat2Icon} alt="" className="mobile-sub-icon" /><span>Spa</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat3Icon} alt="" className="mobile-sub-icon" /><span>Nail Art</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat4Icon} alt="" className="mobile-sub-icon" /><span>Car Spa</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat5Icon} alt="" className="mobile-sub-icon" /><span>Aesthetic</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat6Icon} alt="" className="mobile-sub-icon" /><span>Makeup Studio</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat7Icon} alt="" className="mobile-sub-icon" /><span>Tattoo Studio</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat8Icon} alt="" className="mobile-sub-icon" /><span>Med Spa</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat9Icon} alt="" className="mobile-sub-icon" /><span>Pet Facility</span></Link></li>
+                  <li><Link to="/category" onClick={toggleMobileMenu}><img src={cat10Icon} alt="" className="mobile-sub-icon" /><span>Auto Detailing</span></Link></li>
                 </ul>
               </div>
             </li>

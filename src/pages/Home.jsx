@@ -16,18 +16,21 @@ import {
     faCalendarDays,
     faChevronDown,
     faCloud,
-    faBell,
-    faScissors,
-    faSpa,
-    faHandSparkles,
-    faCar,
-    faUserDoctor,
-    faBrush,
-    faPenNib,
-    faPaw,
-    faWrench
+    faBell
 } from '@fortawesome/free-solid-svg-icons';
 import './style/style.css';
+
+// Category Image Icons
+import cat1Icon from '../assets/icons/category1.png';
+import cat2Icon from '../assets/icons/category2.png';
+import cat3Icon from '../assets/icons/category3.png';
+import cat4Icon from '../assets/icons/category4.png';
+import cat5Icon from '../assets/icons/category5.png';
+import cat6Icon from '../assets/icons/category6.png';
+import cat7Icon from '../assets/icons/category7.png';
+import cat8Icon from '../assets/icons/category8.png';
+import cat9Icon from '../assets/icons/category9.png';
+import cat10Icon from '../assets/icons/category10.png';
 import crmImg from '../assets/CRM.png';
 import mobileCrmImg from '../assets/Mobile-crm.png';
 import insta4Img from '../assets/bubbles/insta44.png';
@@ -90,6 +93,9 @@ import flag18 from '../assets/flag18.svg';
 import flag19 from '../assets/flag19.svg';
 
 import capterraSvg from '../assets/capterra.svg';
+import saas from '../assets/saas.png';
+import software from '../assets/software.webp';
+import source from '../assets/source.webp';
 
 const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
 const flags = [
@@ -305,52 +311,52 @@ const reviews = [
 const softwareCategories = [
     {
         name: "Beauty Salon",
-        icon: faScissors,
+        icon: cat1Icon,
         description: "Maximize salon potential with ease using our best-in-class salon software."
     },
     {
         name: "Spa",
-        icon: faSpa,
+        icon: cat2Icon,
         description: "Simplify spa management and reduce stress with an all-in-one software solution."
     },
     {
         name: "Nail Art",
-        icon: faHandSparkles,
+        icon: cat3Icon,
         description: "Create personalized nail & salon experiences for customers with intuitive software."
     },
     {
         name: "Car Spa",
-        icon: faCar,
+        icon: cat4Icon,
         description: "Easily reduce the daily stress of car spa management with smart software."
     },
     {
         name: "Aesthetic",
-        icon: faBrush,
+        icon: cat5Icon,
         description: "Elevate your aesthetic studio brand with smart aesthetic studio software."
     },
     {
         name: "Makeup Studio",
-        icon: faBrush,
+        icon: cat6Icon,
         description: "Grow & expand a makeup studio brand with comprehensive studio software."
     },
     {
         name: "Tattoo Studio",
-        icon: faPenNib,
+        icon: cat7Icon,
         description: "Leading tattoo studio software for efficiently managing business operations."
     },
     {
         name: "Med Spa",
-        icon: faUserDoctor,
+        icon: cat8Icon,
         description: "Increase Medical Spa business growth with your powerful smart solution."
     },
     {
         name: "Pet Facility",
-        icon: faPaw,
+        icon: cat9Icon,
         description: "Simplify management for pet grooming businesses and veterinary clinics."
     },
     {
         name: "Auto Detailing",
-        icon: faWrench,
+        icon: cat10Icon,
         description: "Transform your auto detailing operations and eliminate everyday chaos."
     }
 ];
@@ -947,7 +953,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="new-geteasy-rating-badge">
-                                <img src={capterraSvg} alt="Software Advice" className="new-geteasy-rating-logo" />
+                                <img src={software} alt="Software Advice" className="new-geteasy-rating-logo" />
                                 <div className="new-geteasy-rating-stars">
                                     {[...Array(5)].map((_, i) => (
                                         <span key={i} className="star">★</span>
@@ -955,7 +961,15 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="new-geteasy-rating-badge">
-                                <img src={capterraSvg} alt="G2" className="new-geteasy-rating-logo" />
+                                <img src={source} alt="G2" className="new-geteasy-rating-logo" />
+                                <div className="new-geteasy-rating-stars">
+                                    {[...Array(5)].map((_, i) => (
+                                        <span key={i} className="star">★</span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="new-geteasy-rating-badge">
+                                <img src={saas} alt="G2" className="new-geteasy-rating-logo" />
                                 <div className="new-geteasy-rating-stars">
                                     {[...Array(5)].map((_, i) => (
                                         <span key={i} className="star">★</span>
@@ -1916,7 +1930,7 @@ const Home = () => {
                             <FadeInUp key={idx} delay={`${(idx % 5) * 0.08}s`}>
                                 <div className="category-card">
                                     <div className="category-icon-wrapper">
-                                        <FontAwesomeIcon icon={cat.icon} />
+                                        <img src={cat.icon} alt={cat.name} className="category-img-icon" />
                                     </div>
                                     <h3 className="category-card-name">{cat.name}</h3>
                                     <p className="category-card-desc">{cat.description}</p>
